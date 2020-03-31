@@ -1,6 +1,6 @@
-# Specimen
+# Specimen1
 
-## Body copy
+## Body copy1
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras arcu libero,
 mollis sed massa vel, *ornare viverra ex*. Mauris a ullamcorper lacus. Nullam

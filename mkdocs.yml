@@ -19,10 +19,10 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Material for MkDocs
-site_description: A Material Design theme for MkDocs
-site_author: Martin Donath
-site_url: https://squidfunk.github.io/mkdocs-material/
+site_name: Wallarm Docs
+site_description: Wallarm Product Documentation
+site_author: Wallarm Inc
+site_url: https://docs.wallarm.com
 
 # Repository
 repo_name: squidfunk/mkdocs-material
@@ -30,7 +30,7 @@ repo_url: https://github.com/squidfunk/mkdocs-material
 edit_uri: ""
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2020 Martin Donath'
+copyright: 'Copyright &copy; 2020 Wallarm'
 
 # Configuration
 theme:
@@ -48,7 +48,7 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: en
   feature:
-    tabs: true
+    tabs: false
   palette:
     primary: indigo
     accent: indigo
@@ -69,13 +69,13 @@ plugins:
 extra:
   social:
     - type: globe
-      link: http://struct.cc
+      link: https://wallarm.com
     - type: github-alt
-      link: https://github.com/squidfunk
+      link: https://github.com/wallarm
     - type: twitter
-      link: https://twitter.com/squidfunk
+      link: https://twitter.com/wallarm
     - type: linkedin
-      link: https://www.linkedin.com/in/squidfunk/
+      link: https://www.linkedin.com/company/4871419
 
 # Extensions
 markdown_extensions:
@@ -85,9 +85,12 @@ markdown_extensions:
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
   - markdown.extensions.meta
+  - markdown.extensions.sane_lists
+  - markdown.extensions.nl2br
   - markdown.extensions.toc:
       permalink: true
   - pymdownx.arithmatex
+  - sane_lists
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -105,32 +108,248 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
+#  - pymdownx.tabbed # doesn't work in the Default MkDocs-Material docker
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: docs
 
 # Page tree
 nav:
-  - Material: index.md
-  - Getting started: getting-started.md
-  - Extensions:
-    - Admonition: extensions/admonition.md
-    - CodeHilite: extensions/codehilite.md
-    - Footnotes: extensions/footnotes.md
-    - Metadata: extensions/metadata.md
-    - Permalinks: extensions/permalinks.md
-    - PyMdown: extensions/pymdown.md
-  - Plugins:
-    - Minify HTML: plugins/minify-html.md
-    - Revision date: plugins/revision-date.md
-    - Search: plugins/search.md
-  - Specimen: specimen.md
-  - Customization: customization.md
-  - Compliance with GDPR: compliance.md
-  - Release notes: release-notes.md
-  - Author's notes: authors-notes.md
-  - Contributing: contributing.md
-  - License: license.md
+  - Home: README.md
+  - MkDocs:
+    - Getting started: getting-started.md
+    - Markdown: markdown.md
+    - Extensions:
+      - Admonition:
+        - Admonition: extensions/admonition.md
+      - CodeHilite: extensions/codehilite.md  
+      - Footnotes: extensions/footnotes.md
+      - Metadata: extensions/metadata.md
+      - PyMdown: extensions/pymdown.md
+      - Permalinks: extensions/permalinks.md
+    - Plugins:
+      - Minify HTML: plugins/minify-html.md
+      - Revision date: plugins/revision-date.md
+      - Search: plugins/search.md
+    - Specimen: specimen.md
+    - Customization: customization.md
+    - Compliance with GDPR: compliance.md
+    - Release notes: release-notes.md
+    - Author's notes: authors-notes.md
+    - Contributing: contributing.md
+    - License: license.md
+  - Quick Start:
+    - How Wallarm Works: en/quickstart-en/qs-intro-en.md
+    - Prerequisites: en/quickstart-en/qs-prereq-en.md
+    - Installation:
+        - Creating the Wallarm Account: en/quickstart-en/qs-license-en.md
+        - Install the Filter Node (NGINX): en/quickstart-en/qs-install-node-en.md
+    - Configure Traffic Proxying: en/quickstart-en/qs-setup-proxy-en.md
+    - Check the Filter Node Operation: en/quickstart-en/qs-check-operation-en.md
+  - Administrator Guide:
+      - Introduction: en/admin-en/admin-intro-en.md
+      - Installation:
+        - Supported Platforms: en/admin-en/supported-platforms.md
+        - NGINX:
+            - Installation Options Overview: en/admin-en/installation-nginx-overview.md
+            - Installing as a Dynamic Module for NGINX: en/admin-en/installation-nginx-en.md
+            - Installing as a Dynamic Module with NGINX from Debian/CentOS Repositories: en/admin-en/installation-nginx-distr-en.md
+            - Installing with NGINX Plus: en/admin-en/installation-nginxplus-en.md
+            - Installing with Docker: en/admin-en/installation-docker-en.md 
+        - Kubernetes:
+            - Installing Wallarm Ingress Controller:
+                - Installing NGINX Ingress Controller with Integrated Wallarm Services: en/admin-en/installation-kubernetes-en.md
+                - Installing NGINX Plus Ingress Controller with Integrated Wallarm Services:
+                    - Introduction: en/admin-en/installation-guides/ingress-plus/introduction.md
+                    - Building the Wallarm NGINX Plus Ingress Controller: en/admin-en/installation-guides/ingress-plus/assembly.md
+                    - Deploying the Wallarm NGINX Plus Ingress Controller: en/admin-en/installation-guides/ingress-plus/deploy.md
+                    - Creating an Ingress Resource: en/admin-en/installation-guides/ingress-plus/resource-creation.md
+                    - Checking the Operation of the Wallarm Services: en/admin-en/installation-guides/ingress-plus/wallarm-services-check.md
+                - Installing Wallarm Sidecar Container:
+                    - How It Works: en/admin-en/installation-guides/kubernetes/wallarm-sidecar-container.md
+                    - Kubernetes Deployment Based on Helm Charts: en/admin-en/installation-guides/kubernetes/wallarm-sidecar-container-helm.md
+                    - Kubernetes Deployment Based on Manifests: en/admin-en/installation-guides/kubernetes/wallarm-sidecar-container-manifest.md
+        - Cloud Platforms:
+            - Installation Options Overview: en/admin-en/installation-guides/clouds-intro.md
+            - Installing on Amazon AWS: en/admin-en/installation-ami-en.md
+            - Creating and Configuring the Wallarm Filter Node Instance: en/admin-en/installation-ami-en.md
+            - Creating an Amazon Machine Image: en/admin-en/installation-guides/amazon-cloud/create-image.md
+            - Setting Up Filter Node Auto-Scaling:
+                - Overview: en/admin-en/installation-guides/amazon-cloud/autoscaling-overview.md
+                - Setting Up Filter Node Auto-Scaling: en/admin-en/installation-guides/amazon-cloud/autoscaling-group-guide.md
+                - Setting Up Incoming Request Balancing: en/admin-en/installation-guides/amazon-cloud/load-balancing-guide.md
+            - Installing on the Google Cloud Platform: en/admin-en/installation-gcp-en.md
+            - Creating and Configuring the Wallarm Filter Node Instance: en/admin-en/installation-gcp-en.md
+            - Creating an Image with the Wallarm Filter Node: en/admin-en/installation-guides/google-cloud/create-image.md
+            - Setting Up Filter Node Auto-Scaling:
+                - Overview: en/admin-en/installation-guides/google-cloud/autoscaling-overview.md
+                - Creating a Filter Node Instance Template: en/admin-en/installation-guides/google-cloud/creating-instance-template.md
+                - Creating a Managed Instance Group with Enabled Auto-Scaling: en/admin-en/installation-guides/google-cloud/creating-autoscaling-group.md
+                - Setting up Incoming Request Balancing: en/admin-en/installation-guides/google-cloud/load-balancing-guide.md
+            - Installing on Heroku: en/admin-en/installation-heroku-en.md
+        - Installing on the Kong Platform: en/admin-en/installation-kong-en.md
+        - Installing on Linux [DEPRECATED]: en/admin-en/installation-linux-en.md
+        - Separate Postanalytics Installation: en/admin-en/installation-postanalytics-en.md
+        - Checking the Filter Node Operation: en/admin-en/installation-check-operation-en.md
+      - Configuration:
+          - Configuration Options (NGINX): en/admin-en/configure-parameters-en.md
+          - Filtering Mode Configuration: en/admin-en/configure-wallarm-mode.md
+          - Configuring and Working with the Statistics Service: en/admin-en/configure-statistics-service.md
+          - Fine-tuning of Wallarm Ingress Controller: en/admin-en/configure-kubernetes-en.md
+          - Analyzing Mirrored Traffic with NGINX: en/admin-en/mirror-traffic-en.md
+          - Blocking Part of a Website: en/admin-en/block-part-en.md
+          - Settings for Using a Balancer or Proxy: en/admin-en/using-proxy-or-balancer-en.md
+          - Masking Sensitive Data: en/admin-en/sensitive-data-en.md
+          - Filter Node and Cloud Synchronization Configuration: en/admin-en/configure-cloud-node-synchronization-en.md
+          - Working with Filter Node Logs: en/admin-en/configure-logging.md
+          - Using Single Sign-On (SSO):
+            - Introduction: en/admin-en/configuration-guides/sso/intro.md
+            - Connecting SSO with G Suite:
+              - Overview: en/admin-en/configuration-guides/sso/gsuite/overview.md
+              - Step 1. Generating Parameters on the Wallarm Side: en/admin-en/configuration-guides/sso/gsuite/setup-sp.md
+              - Step 2. Creating and Configuring an Application in G Suite: en/admin-en/configuration-guides/sso/gsuite/setup-idp.md
+              - Step 3. Transferring G Suite Metadata to the Wallarm Setup Wizard: en/admin-en/configuration-guides/sso/gsuite/metadata-transfer.md
+              - Step 4. Allowing Access to the Wallarm Application on the G Suite Side: en/admin-en/configuration-guides/sso/gsuite/allow-access-to-wl.md
+            - Connecting SSO with Okta:
+              - Overview: en/admin-en/configuration-guides/sso/okta/overview.md
+              - Step 1. Generating Parameters on the Wallarm Side: en/admin-en/configuration-guides/sso/okta/setup-sp.md
+              - Step 2. Creating and Configuring an Application in Okta: en/admin-en/configuration-guides/sso/okta/setup-idp.md
+              - Step 3. Transferring Okta Metadata to the Wallarm Setup Wizard: en/admin-en/configuration-guides/sso/okta/metadata-transfer.md
+              - Step 4. Allowing Access to the Wallarm Application on the Okta Side: en/admin-en/configuration-guides/sso/okta/allow-access-to-wl.md
+            - Configuring SSO Authentication for Users: en/admin-en/configuration-guides/sso/employ-user-auth.md
+            - Disabling and Removing the Configured SSO Provider: en/admin-en/configuration-guides/sso/disable-sso-provider.md 
+      - Integration:
+        - Configuring a Failover Method: en/admin-en/configure-backup-en.md
+        - Blocking by IP Address:
+          - Methods of Blocking by IP Address: en/admin-en/configure-ip-blocking-en.md
+          - Blocking with iptables: en/admin-en/configure-ip-blocking-iptables-en.md
+          - Blocking with NGINX: en/admin-en/configure-ip-blocking-nginx-en.md
+        - Using a Mirrored Wallarm Repository:
+          - How to Mirror the Wallarm Repository for CentOS: en/admin-en/integration-guides/repo-mirroring/centos/how-to-mirror-repo-artifactory.md
+          - How to Install Wallarm Packages from the Local JFrog Artifactory Repository for CentOS: en/admin-en/integration-guides/repo-mirroring/centos/how-to-use-mirrored-repo.md
+        - Monitoring the Filter Node:
+            - Introduction: en/admin-en/monitoring/intro.md
+            - How to Fetch Metrics: en/admin-en/monitoring/fetching-metrics.md
+            - Available Metrics: en/admin-en/monitoring/available-metrics.md
+            - Examples of Exporting and Working with Metrics:
+                - Grafana:
+                    - Exporting Metrics to InfluxDB via the `collectd` Network Plugin: en/admin-en/monitoring/network-plugin-influxdb.md
+                    - Exporting Metrics to Graphite via the `collectd` Write Plugin: en/admin-en/monitoring/write-plugin-graphite.md
+                    - Working with the Filter Node Metrics in Grafana: en/admin-en/monitoring/working-with-grafana.md
+                - Nagios:
+                    - Exporting Metrics to Nagios via the `collectd-nagios` Utility: en/admin-en/monitoring/collectd-nagios.md
+                    - Working with the Filter Node Metrics in Nagios: en/admin-en/monitoring/working-with-nagios.md
+                - Zabbix:
+                    - Exporting Metrics to Zabbix via the `collectd-nagios` Utility: en/admin-en/monitoring/collectd-zabbix.md
+                    - Working with the Filter Node in Zabbix: en/admin-en/monitoring/working-with-zabbix.md  
+      - Updating and Migrating:
+          - Updating on Linux: en/admin-en/update-linux-en.md
+          - Updating the Separately Installed Postanalytics Module: en/admin-en/update-postanalytics.md
+          - Updating Docker: en/admin-en/update-docker-en.md
+          - Migrating the Filter Node 2.12 to 2.14 on Linux: en/admin-en/migrating-212-214.md
+      - Operations:
+          - Configuring SELinux: en/admin-en/configure-selinux.md
+          - Changing Tarantool Memory Allocation: en/admin-en/configure-tarantool-en.md
+          - Wallarm User Acceptance Testing Checklist: en/admin-en/uat-checklist-en.md
+      - Troubleshooting:
+          - Filter Node Errors out with «libproton error did not allocate memory» [DEPRECATED]: en/admin-en/libproton-error-en.md
+          - File Download Scenarios Fail: en/admin-en/file-download-error-en.md
+      - Wallarm API: en/admin-en/api-en.md
+      - Support of the Scanner Operation:
+          - Disabling the IP Address Blocking of the Wallarm Scanner: en/admin-en/scanner-ips-whitelisting.md 
+          - Scanner Addresses:
+              - Scanner Addresses for EU Cloud: en/admin-en/scanner-address-en.md
+              - Scanner Addresses for US Cloud: en/admin-en/scanner-address-us-en.md
+          - Contacting Wallarm Support to Stop the Scanner: en/admin-en/scanner-complaint-en.md
+  - User guide:
+      - Introduction: en/user-guides/cloud-ui/user-intro.md
+      - Dashboards:
+          - Overview: en/user-guides/cloud-ui/dashboard/intro.md
+          - The “WAF” Dashboard: en/user-guides/cloud-ui/dashboard/waf.md
+          - The “Scanner” Dashboard: en/user-guides/cloud-ui/dashboard/scanner.md
+      - Events:
+          - Checking Events: en/user-guides/cloud-ui/events/check-attack.md
+          - Analyzing Attacks: en/user-guides/cloud-ui/events/analyze-attack.md
+          - Working with False Attacks: en/user-guides/cloud-ui/events/false-attack.md
+          - Verifying Attacks: en/user-guides/cloud-ui/events/verify-attack.md
+      - Vulnerabilities:
+          - Checking Vulnerabilities: en/user-guides/cloud-ui/vulnerabilities/check-vuln.md
+          - Analyzing Vulnerabilities: en/user-guides/cloud-ui/vulnerabilities/analyze-vuln.md
+          - Closing and Opening Vulnerabilities: en/user-guides/cloud-ui/vulnerabilities/close-open-vuln.md
+          - Rechecking Vulnerabilities: en/user-guides/cloud-ui/vulnerabilities/recheck-vuln.md
+          - Working with False Vulnerabilities: en/user-guides/cloud-ui/vulnerabilities/false-vuln.md
+      - Search and Filters:
+          - Using Search: en/user-guides/cloud-ui/search-and-filters/use-search.md
+          - Using Filters: en/user-guides/cloud-ui/search-and-filters/use-filter.md
+          - Creating a Custom Report: en/user-guides/cloud-ui/search-and-filters/custom-report.md
+      - Scanner:
+          - Scanner Overview: en/user-guides/cloud-ui/scanner/intro.md
+          - Working with the Scope: en/user-guides/cloud-ui/scanner/check-scope.md
+          - Reserved Domains: en/user-guides/cloud-ui/scanner/reserved-domains.md
+          - Scanner Settings: en/user-guides/cloud-ui/scanner/configure-scanner.md
+          - Configuring Scanner Modules: en/user-guides/cloud-ui/scanner/configure-scanner-modules.md
+      - Nodes:
+          - Nodes Overview: en/user-guides/cloud-ui/nodes/nodes.md
+          - Creating and Managing a Node: en/user-guides/cloud-ui/nodes/create-node.md
+      - Rules:
+          - Application Profile Rules: en/user-guides/cloud-ui/rules/intro.md
+          - Inspecting Application Profile Rules: en/user-guides/cloud-ui/rules/view.md
+          - Adding Rules in the Application Profile: en/user-guides/cloud-ui/rules/add-rule.md
+          - Compilation and Update Of Security Rules: en/user-guides/cloud-ui/rules/compiling.md
+          - How Wallarm Analyzes Requests: en/user-guides/cloud-ui/rules/request-processing.md
+          - Filter Mode Rule: en/user-guides/cloud-ui/rules/wallarm-mode-rule.md
+          - Rules for Data Masking: en/user-guides/cloud-ui/rules/sensitive-data-rule.md
+          - Virtual Patching: en/user-guides/cloud-ui/rules/vpatch-rule.md
+          - User-Defined Detection Rules: en/user-guides/cloud-ui/rules/regex-rule.md
+      - Triggers:
+          - What are Triggers: en/user-guides/cloud-ui/triggers/triggers.md
+          - Creating Triggers: en/user-guides/cloud-ui/triggers/create-trigger.md
+          - Disabling Triggers: en/user-guides/cloud-ui/triggers/disable-trigger.md
+          - Deleting Triggers: en/user-guides/cloud-ui/triggers/delete-trigger.md
+          - IP Address Blacklist: en/user-guides/cloud-ui/blacklist/blacklist.md
+      - Settings:
+          - Profile: en/user-guides/cloud-ui/settings/account.md
+          - General: en/user-guides/cloud-ui/settings/general.md
+          - Subscriptions: en/user-guides/cloud-ui/settings/subscriptions.md
+          - Applications: en/user-guides/cloud-ui/settings/applications.md
+          - Markers: en/user-guides/cloud-ui/settings/markers.md
+          - Users: en/user-guides/cloud-ui/settings/users.md
+          - Activity Log: en/user-guides/cloud-ui/settings/audit-log.md
+      - Integrations:
+          - Integrations Overview: en/user-guides/cloud-ui/settings/integrations/integrations-intro.md 
+          - Email Reports and Notifications: en/user-guides/cloud-ui/settings/integrations/email.md
+          - Slack Notifications: en/user-guides/cloud-ui/settings/integrations/slack.md
+          - Telegram Reports and Notifications: en/user-guides/cloud-ui/settings/integrations/telegram.md
+          - OpsGenie Notifications: en/user-guides/cloud-ui/settings/integrations/opsgenie.md
+          - PagerDuty Notifications: en/user-guides/cloud-ui/settings/integrations/pagerduty.md
+          - Splunk Notifications: en/user-guides/cloud-ui/settings/integrations/splunk.md
+          - Sumo Logic Notifications: en/user-guides/cloud-ui/settings/integrations/sumologic.md
+      - Guide to Using SSO Authentication to Log in to Wallarm: en/user-guides/cloud-ui/use-sso.md    
+  - Partner Guide:
+      - Introduction: en/partner-en/partner-intro-en.md
+      - Signing up with Wallarm: en/partner-en/partner-signup-en.md
+      - Getting your UUID and Secret Key: en/partner-en/partner-uuid-en.md
+      - Installing the Filter Node: en/partner-en/partner-install-en.md
+      - Creating a Tenant: en/partner-en/partner-create-tenant-en.md
+      - Configuring Traffic Processing: en/partner-en/partner-set-tenant-en.md
+  - Release Notes:
+      - Version 2.14: en/release-notes-en/relnotes-en_v2.14.md
+      - Version 2.12: en/release-notes-en/relnotes-en_v2.12.md
+      - Version 2.10: en/release-notes-en/relnotes-en_v2.10.md
+      - Version 2.8: en/release-notes-en/relnotes-en_v2.8.md
+      - Version 2.6: en/release-notes-en/relnotes-en_v2.6.md
+      - Version 2.4: en/release-notes-en/relnotes-en_v2.4.md
+      - Version 2.2: en/release-notes-en/relnotes-en_v2.2.md
+  - Appendix:
+      - Glossary: en/glossary-en.md
+      - Attacks and Vulnerabilities List: en/attacks-vulns-list.md
+      - Contacting the Support Team: en/cloud-include/contacting-support.md
+  - Envoy: 
+    - Installing with Docker: en/admin-en/installation-guides/envoy/envoy-docker.md
+    - Configuration Options (Envoy): en/admin-en/configuration-guides/envoy/fine-tuning.md
 
 # Google Analytics
 google_analytics:
