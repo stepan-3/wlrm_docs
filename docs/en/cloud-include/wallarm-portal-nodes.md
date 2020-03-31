@@ -1,0 +1,1 @@
+the Wallarm portal in the [EU](https://my.wallarm.com/nodes) or [US](https://us1.my.wallarm.com/nodes) cloud
