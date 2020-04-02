@@ -28,7 +28,7 @@ site_url: https://docs.wallarm.com
 # Repository
 repo_name: stepan-3/wlrm_docs
 repo_url: https://github.com/stepan-3/wlrm_docs
-edit_uri: "https://github.com/stepan-3/wlrm_docs/tree/gh-pages"
+edit_uri: "https://github.com/stepan-3/wlrm_docs"
 
 # Copyright
 copyright: 'Copyright &copy; 2020 Wallarm'
