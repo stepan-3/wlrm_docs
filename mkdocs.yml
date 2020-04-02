@@ -54,7 +54,7 @@ theme:
     primary: indigo
     accent: indigo
   font:
-    text: Roboto
+    text: Inter
     code: Roboto Mono
   favicon: assets/images/favicon.png
   logo:
