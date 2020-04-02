@@ -108,10 +108,16 @@ Run one of the `docker run` commands depending on the
  cloud in use: 
 --8<-- "en/cloud-include/docker-run-command-with-creds.md"
 
+Commands are in the tabs below:
+
 === "EU Cloud"
+   First tab
+
     docker run -d "NODE_UUID=00000000-0000-0000-0000-000000000000" -e NODE_SECRET="0000000000000000000000000000000000000000000000000000000000000000" -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
 
 === "US Cloud"
+   Send tab
+
     docker run -d -e WALLARM_API_HOST=us1.api.wallarm.com -e "NODE_UUID=00000000-0000-0000-0000-000000000000" -e NODE_SECRET="0000000000000000000000000000000000000000000000000000000000000000" -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
 
 ### Use of a Prepared Configuration File Containing Credentials
@@ -121,7 +127,7 @@ Pass the following files to the filter node's container via Docker volumes:
 * the `license.key` file.
 
 ``` bash
-# docker run -d -v /path/to/node.yaml:/etc/wallarm/node.yaml -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
+docker run -d -v /path/to/node.yaml:/etc/wallarm/node.yaml -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
 ```
 
 ## 3. Configure NGINX-Wallarm
@@ -184,11 +190,11 @@ the container. See details in [Monitor the filter node][doc-monitoring].
 Example of running the scripts:
 
 ``` bash
-# docker exec -it wallarm-node /usr/lib/nagios-plugins/check_wallarm_tarantool_timeframe -w 1800 -c 900
+docker exec -it wallarm-node /usr/lib/nagios-plugins/check_wallarm_tarantool_timeframe -w 1800 -c 900
 ```
 
 ``` bash
-# docker exec -it wallarm-node /usr/lib/nagios-plugins/check_wallarm_export_delay -w 120 -c 300
+docker exec -it wallarm-node /usr/lib/nagios-plugins/check_wallarm_export_delay -w 120 -c 300
 ```
 
 ## The Installation Is Complete
