@@ -85,9 +85,9 @@ markdown_extensions:
   - markdown.extensions.def_list
   - markdown.extensions.footnotes
   - markdown.extensions.meta
-  - markdown.extensions.sane_lists
+#  - markdown.extensions.sane_lists
   - markdown.extensions.nl2br
-  - prependnewline #plugin to make list behavior, such as we have in GitBook now
+#  - prependnewline #plugin to make list behavior, such as we have in GitBook now
   - markdown.extensions.toc:
       permalink: true
   - pymdownx.arithmatex
@@ -109,7 +109,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
-  - pymdownx.tabbed # doesn't work in the Default MkDocs-Material docker
+  - pymdownx.tabbed # doesn't work in the default MkDocs-Material docker
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
