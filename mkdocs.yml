@@ -25,8 +25,8 @@ site_author: Wallarm Inc
 site_url: https://docs.wallarm.com
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: stepan-3/wlrm_docs
+repo_url: https://github.com/stepan-3/wlrm_docs
 edit_uri: ""
 
 # Copyright
