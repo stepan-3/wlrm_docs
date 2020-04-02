@@ -18,19 +18,19 @@ the dynamic module, contact [Wallarm Support](../cloud-include/contacting-suppor
 
 With your support request, provide the following information provided by the output of the given commands:
 
-* Linux kernel version: `uname -a`
-* Linux distributive: `cat /etc/*release`
-* NGINX version:
+  * Linux kernel version: `uname -a`
+  * Linux distributive: `cat /etc/*release`
+  * NGINX version:
 
-  * [NGINX official build](https://nginx.org/en/linux_packages.html): `/usr/sbin/nginx -V`
-  * NGINX custom build: `<path to nginx>/nginx -V`
+    * [NGINX official build](https://nginx.org/en/linux_packages.html): `/usr/sbin/nginx -V`
+    * NGINX custom build: `<path to nginx>/nginx -V`
 
-* Compatibility signature:
+  * Compatibility signature:
 
-  * [NGINX official build](https://nginx.org/en/linux_packages.html): `egrep -ao '.,.,.,[01]{33}' /usr/sbin/nginx`
-  * NGINX custom build: `egrep -ao '.,.,.,[01]{33}' <path to nginx>/nginx`
+    * [NGINX official build](https://nginx.org/en/linux_packages.html): `egrep -ao '.,.,.,[01]{33}' /usr/sbin/nginx`
+    * NGINX custom build: `egrep -ao '.,.,.,[01]{33}' <path to nginx>/nginx`
 
-* The user (and the user's group) who is running the NGINX worker processes: `grep -w 'user' <path to the NGINX configuration files/nginx.conf>`
+  * The user (and the user's group) who is running the NGINX worker processes: `grep -w 'user' <path to the NGINX configuration files/nginx.conf>`
 
 ## Installation Options
 
