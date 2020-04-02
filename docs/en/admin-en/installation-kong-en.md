@@ -22,11 +22,9 @@
 
     The official Kong documentation is available by the [link][kong-docs].
 
-<!-- -->
-
-    #### Warning:: Known Limitations
+!!! warning "Known Limitations"
     
-      * The [`wallarm_block_page`][doc-wallarmblockpage] directive is not supported.
+    * The [`wallarm_block_page`][doc-wallarmblockpage] directive is not supported.
     * Wallarm configuration via [Kong Admin API][kong-admin-api] is not supported.
 
 ## Installation
