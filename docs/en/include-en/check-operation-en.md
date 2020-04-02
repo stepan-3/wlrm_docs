@@ -22,10 +22,7 @@ curl http://127.0.0.8/wallarm-status
 The output will be like:
 
 ``` json
-{ "requests":0,"attacks":0,"blocked":0,"abnormal":0,"tnt_errors":0,"api_errors":0,
-"requests_lost":0,"segfaults":0,"memfaults":0, "softmemfaults":0,"time_detect":0,"db_id":46,
-"lom_id":16767,"proton_instances": { "total":1,"success":1,"fallback":0,"failed":0 },
-"stalled_workers_count":0,"stalled_workers":[] }
+{ "requests":0,"attacks":0,"blocked":0,"abnormal":0,"tnt_errors":0,"api_errors":0,"requests_lost":0,"segfaults":0,"memfaults":0, "softmemfaults":0,"time_detect":0,"db_id":46,"lom_id":16767,"proton_instances":{ "total":1,"success":1,"fallback":0,"failed":0 },"stalled_workers_count":0,"stalled_workers":[] }
 ```
 
 This means that the filter node statistics service is running and working properly.

@@ -1,8 +1,8 @@
 # Installing as a Dynamic Module for NGINX
 
-    #### Warning:: Commercial NGINX Plus and Open Source NGINX
+!!! warning "Commercial NGINX Plus and Open Source NGINX"
     The instructions in this section address the filter node installation as a dynamic module for the free open-source NGINX.
->
+
     If you are running the commercial NGINX Plus, you need a different set of instructions. See [Installing with NGINX Plus](installation-nginxplus-en.md).
 
 If you have a running NGINX installed in your network infrastructure, you can install
@@ -36,7 +36,7 @@ With your support request, provide the following information provided by the out
 
 --8<-- "en/include-en/installation-options-nginx-en.md"
 
-    #### Warning:: Installation of postanalytics on a separate server
+!!! warning "Installation of postanalytics on a separate server"
     If you are planning to install postanalytics on a separate server,
     you must install postanalytics first. See details in [Separate postanalytics installation](installation-postanalytics-en.md).
 
@@ -53,12 +53,8 @@ To install as a dynamic module for NGINX, you must:
 9. Configure the filtration mode.
 10. Configure logging.
 11. Restart NGINX.
-    
-<!-- -->
 
 --8<-- "en/include-en/elevated-priveleges.md"
-
-<!-- -->    
     
 ## 1. Install NGINX
 
@@ -72,8 +68,6 @@ You can:
 !!! info "Installing on Amazon Linux 2"
     To install NGINX on Amazon Linux 2, use the CentOS 7 instruction.
 
-<!-- -->
-
 ## 2. Add the Wallarm Repositories
 
 The installation and updating of the filter node is done from the Wallarm
@@ -83,11 +77,7 @@ Depending on your operating system, run one of the commands:
 
 --8<-- "en/include-en/add-repo-en.md"
 
-<!-- -->
-
 --8<-- "en/include-en/access-repo-en.md"
-
-<!-- -->
 
 ## 3. Install the Wallarm Packages
 
@@ -103,8 +93,6 @@ install the following packages:
 Run the following command to install the required packages:
 
 --8<-- "en/include-en/install-nginx-postanalytics-en.md"
-
-<!-- -->
 
 ### Install Only the Requests Processing on the Server
 

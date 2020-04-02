@@ -5,9 +5,7 @@ infrastructure integration.
 
 You must have administrator access to perform most of the operations described in
 this guide. You can set the administrator access on the *Settings* –> *Users*
-tab on 
---8<-- "en/cloud-include/wallarm-portal.md"
-.
+tab on --8<-- "en/cloud-include/wallarm-portal.md".
 
 !!! note
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod

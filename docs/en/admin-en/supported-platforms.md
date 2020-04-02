@@ -21,13 +21,16 @@
 
 !!! info "Installation Prerequisites"
     Make sure that you acquire the following before installing the filter node:
+
     *   The supported platform 
     *   The permissions to execute commands with `root` rights
     *   A Wallarm account in one of the following clouds:
+
         *   [The Wallarm EU cloud][link-wallarm-account-eu]
         *   [The Wallarm US cloud][link-wallarm-account-us]
 
 The Wallarm filter node can be installed on the following platforms:
+
 *   NGINX and NGINX Plus
     
     The integration of the filter node with NGINX or NGINX Plus is performed using several modules.
@@ -36,25 +39,21 @@ The Wallarm filter node can be installed on the following platforms:
     
     Additionally, you can deploy a filter node as a Docker container. The resulting filter node installation will contain all necessary modules (see [installation instructions][link-ig-docker-nginx]).
     
-    >   #### Info:: Supported Operating Systems
-    >   
-    >   The Wallarm modules can be installed on the following operating systems:
-    >   
-    >   *   Debian 8.x (jessie)
-    >   *   Debian 9.x (stretch)
-    >   *   Debian 10.x (buster)
-    >   *   Ubuntu 14.04 LTS (trusty)
-    >   *   Ubuntu 16.04 LTS (xenial)
-    >   *   Ubuntu 18.04 LTS (bionic)
-    >   *   CentOS 6.x
-    >   *   CentOS 7.x
-    >   *   Amazon Linux 2
+!!! info "Supported Operating Systems"
+    The Wallarm modules can be installed on the following operating systems:
+
+    *   Debian 8.x (jessie)
+    *   Debian 9.x (stretch)
+    *   Debian 10.x (buster)
+    *   Ubuntu 14.04 LTS (trusty)
+    *   Ubuntu 16.04 LTS (xenial)
+    *   Ubuntu 18.04 LTS (bionic)
+    *   CentOS 6.x
+    *   CentOS 7.x
+    *   Amazon Linux 2
     
-    <!-- -->
-    
-    >   #### Warning:: Operating System Requirements
-    >   
-    >   The modules can only be installed on 64-bit operating systems.
+!!! warning "Operating System Requirements"
+    The modules can only be installed on 64-bit operating systems.
 
 <!-- Uncomment when Envoy docs will be required
 *   Envoy
@@ -64,10 +63,10 @@ The Wallarm filter node can be installed on the following platforms:
     You can deploy a filter node as a Docker container. The resulting filter node installation will contain all necessary modules (see [installation instructions][link-ig-docker-envoy]).
 -->
     
-*   The Kubernetes Cluster<br>
---8<-- "en/include-en/ingress-k8s-limitations-padding.md"   
-    <!-- -->    
-    
+*   The Kubernetes Cluster
+
+--8<-- "en/include-en/ingress-k8s-limitations-padding.md"
+
     Installing the filter node on the Kubernetes Cluster provides the following options:
     *   The NGINX Ingress Controller with Integrated Wallarm Services ([installation instructions][link-ig-ingress-nginx])
     
@@ -78,12 +77,12 @@ The Wallarm filter node can be installed on the following platforms:
         >   [The Wallarm's installation instructions][link-ig-ingress-nginx] are suitable if you are deploying the Ingress Controller with integrated Wallarm services on the Konvoy. However, you may want to look at [the D2IQ's installation instructions][link-ig-ingress-nginx-d2iq].  
     
     *   The NGINX Plus Ingress Controller with Integrated Wallarm Services ([installation instructions][link-ig-ingress-nginxplus])
-    <br><br>
+
 *   The cloud platforms:
     *   Amazon AWS ([installation instructions][link-ig-aws])
     *   Google Cloud ([installation instructions][link-ig-gcloud])
     *   Heroku with the Heroku-16 or Heroku-18 stack ([installation instructions][link-ig-heroku])
-    <br><br>
+
 *   Kong ([installation instructions][link-ig-kong])
     >   #### Info:: Supported Operating Systems
     >   
