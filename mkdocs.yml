@@ -77,6 +77,9 @@ extra:
     - type: linkedin
       link: https://www.linkedin.com/company/4871419
 
+extra_css:
+  - 'stylesheets/extra.css'
+
 # Extensions
 markdown_extensions:
   - markdown.extensions.admonition

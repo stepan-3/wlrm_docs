@@ -19,14 +19,13 @@
 
 #   Supported Platforms
 
-      #### Info:: Installation Prerequisites
-      
-      Make sure that you acquire the following before installing the filter node:
-      *   The supported platform 
-      *   The permissions to execute commands with `root` rights
-      *   A Wallarm account in one of the following clouds:
-            *   [The Wallarm EU cloud][link-wallarm-account-eu]
-                *   [The Wallarm US cloud][link-wallarm-account-us]
+!!! info "Installation Prerequisites"
+    Make sure that you acquire the following before installing the filter node:
+    *   The supported platform 
+    *   The permissions to execute commands with `root` rights
+    *   A Wallarm account in one of the following clouds:
+        *   [The Wallarm EU cloud][link-wallarm-account-eu]
+        *   [The Wallarm US cloud][link-wallarm-account-us]
 
 The Wallarm filter node can be installed on the following platforms:
 *   NGINX and NGINX Plus
