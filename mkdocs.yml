@@ -87,7 +87,7 @@ markdown_extensions:
   - markdown.extensions.meta
   - markdown.extensions.sane_lists
   - markdown.extensions.nl2br
-  - markdown.extensions.prependnewline #plugin to make list behavior, such as we have in GitBook now
+  - prependnewline #plugin to make list behavior, such as we have in GitBook now
   - markdown.extensions.toc:
       permalink: true
   - pymdownx.arithmatex
