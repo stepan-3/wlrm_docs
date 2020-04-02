@@ -19,18 +19,19 @@ To deploy the filter node as a Docker container, you must:
 4. Configure logging.
 5. Configure monitoring.
 
-    #### Warning:: Known limitations:
-    
+!!! warning "Known limitations"
     * [IP blocking][doc-ip-blocking] is not supported.
-      * Most [Wallarm directives][doc-config-params] cannot be changed through environment variables; these directives must be written in configuration files inside the container.
+    * Most [Wallarm directives][doc-config-params] cannot be changed through environment variables; these directives must be written in configuration files inside the container.
 
 ## 1. Deploy the Filter Node
 
 Run one of the `docker run` commands depending on the 
---8<-- "en/cloud-include/wallarm-clouds.md"
- cloud in use: 
---8<-- "en/cloud-include/docker-run-command.md"
 
+--8<-- "en/cloud-include/wallarm-clouds.md"
+
+cloud in use: 
+
+--8<-- "en/cloud-include/docker-run-command.md"
 
 where:
 
@@ -107,13 +108,11 @@ Run one of the `docker run` commands depending on the
  cloud in use: 
 --8<-- "en/cloud-include/docker-run-command-with-creds.md"
 
-<!-- -->
-
-
 === "EU Cloud"
-# docker run -d "NODE_UUID=00000000-0000-0000-0000-000000000000" -e NODE_SECRET="0000000000000000000000000000000000000000000000000000000000000000" -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
+    docker run -d "NODE_UUID=00000000-0000-0000-0000-000000000000" -e NODE_SECRET="0000000000000000000000000000000000000000000000000000000000000000" -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
+
 === "US Cloud"
-# docker run -d -e WALLARM_API_HOST=us1.api.wallarm.com -e "NODE_UUID=00000000-0000-0000-0000-000000000000" -e NODE_SECRET="0000000000000000000000000000000000000000000000000000000000000000" -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
+    docker run -d -e WALLARM_API_HOST=us1.api.wallarm.com -e "NODE_UUID=00000000-0000-0000-0000-000000000000" -e NODE_SECRET="0000000000000000000000000000000000000000000000000000000000000000" -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
 
 ### Use of a Prepared Configuration File Containing Credentials
 
@@ -121,7 +120,7 @@ Pass the following files to the filter node's container via Docker volumes:
 * the `node.yaml` file, containing the credentials for the filter node to access the Wallarm cloud, and
 * the `license.key` file.
 
-```term
+``` bash
 # docker run -d -v /path/to/node.yaml:/etc/wallarm/node.yaml -v /path/to/license.key:/etc/wallarm/license.key -e NGINX_BACKEND=192.168.xxx.1 wallarm/node
 ```
 
@@ -167,9 +166,7 @@ The log directories are:
 
 ### Configure Extended Logging
 
-<!-- -->
 --8<-- "en/include-en/installation-step-logging.md"
-<!-- -->
 
 ### Configure Log Rotation
 
@@ -186,24 +183,18 @@ the container. See details in [Monitor the filter node][doc-monitoring].
 
 Example of running the scripts:
 
-```term
+``` bash
 # docker exec -it wallarm-node /usr/lib/nagios-plugins/check_wallarm_tarantool_timeframe -w 1800 -c 900
 ```
 
-```term
+``` bash
 # docker exec -it wallarm-node /usr/lib/nagios-plugins/check_wallarm_export_delay -w 120 -c 300
 ```
-
-<!-- -->
 
 ## The Installation Is Complete
 
 --8<-- "en/include-en/check-setup-installation-en.md"
 
-<!-- -->
-
 --8<-- "en/include-en/filter-node-defaults.md"
-
-<!-- -->
 
 --8<-- "en/include-en/installation-extra-steps.md"
