@@ -87,6 +87,7 @@ markdown_extensions:
   - markdown.extensions.meta
   - markdown.extensions.sane_lists
   - markdown.extensions.nl2br
+  - markdown.extensions.prependnewline #plugin to make list behavior, such as we have in GitBook now
   - markdown.extensions.toc:
       permalink: true
   - pymdownx.arithmatex
@@ -118,29 +119,7 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Home: README.md
-  - MkDocs:
-    - Getting started: getting-started.md
-    - Markdown: markdown.md
-    - Extensions:
-      - Admonition:
-        - Admonition: extensions/admonition.md
-      - CodeHilite: extensions/codehilite.md  
-      - Footnotes: extensions/footnotes.md
-      - Metadata: extensions/metadata.md
-      - PyMdown: extensions/pymdown.md
-      - Permalinks: extensions/permalinks.md
-    - Plugins:
-      - Minify HTML: plugins/minify-html.md
-      - Revision date: plugins/revision-date.md
-      - Search: plugins/search.md
-    - Specimen: specimen.md
-    - Customization: customization.md
-    - Compliance with GDPR: compliance.md
-    - Release notes: release-notes.md
-    - Author's notes: authors-notes.md
-    - Contributing: contributing.md
-    - License: license.md
+  - Home: en/README.md
   - Quick Start:
     - How Wallarm Works: en/quickstart-en/qs-intro-en.md
     - Prerequisites: en/quickstart-en/qs-prereq-en.md
@@ -350,6 +329,28 @@ nav:
   - Envoy: 
     - Installing with Docker: en/admin-en/installation-guides/envoy/envoy-docker.md
     - Configuration Options (Envoy): en/admin-en/configuration-guides/envoy/fine-tuning.md
+    - MkDocs:
+      - Getting started: getting-started.md
+      - Markdown: markdown.md
+      - Extensions:
+        - Admonition:
+          - Admonition: extensions/admonition.md
+        - CodeHilite: extensions/codehilite.md  
+        - Footnotes: extensions/footnotes.md
+        - Metadata: extensions/metadata.md
+        - PyMdown: extensions/pymdown.md
+        - Permalinks: extensions/permalinks.md
+      - Plugins:
+        - Minify HTML: plugins/minify-html.md
+        - Revision date: plugins/revision-date.md
+        - Search: plugins/search.md
+      - Specimen: specimen.md
+      - Customization: customization.md
+      - Compliance with GDPR: compliance.md
+      - Release notes: release-notes.md
+      - Author's notes: authors-notes.md
+      - Contributing: contributing.md
+      - License: license.md
 
 # Google Analytics
 google_analytics:
