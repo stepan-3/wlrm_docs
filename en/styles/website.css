@@ -1,0 +1,5 @@
+@import "../../custom/index.css";
+
+.logo {
+    background-image: url('../../images/wallarm_logo-en.svg?v=1');
+}

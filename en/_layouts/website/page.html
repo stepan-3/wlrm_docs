@@ -1,0 +1,16 @@
+{% extends template.self %}
+
+{% block body %}
+
+    {% block book_header %}
+    <div class="book-header" role="navigation">
+        {% if glossary.path %}
+            <a href="{{ ('/' + glossary.path)|resolveFile }}" class="btn pull-left" aria-label="{{ "GLOSSARY_OPEN"|t }}"><i class="fa fa-sort-alpha-asc"></i></a>
+        {% endif %}
+        <a href="/en/"><div class="logo"></div></a>
+    </div>
+    {% endblock %}
+
+    {{ super() }}
+
+{% endblock %}

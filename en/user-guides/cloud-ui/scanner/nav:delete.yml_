@@ -1,0 +1,30 @@
+nav:
+    - Home: README.md
+    - Quick Start:
+      - How Wallarm Works: quickstart-en/qs-intro-en.md
+      - Prerequisites: quickstart-en/qs-prereq-en.md
+      - Installation:
+          - Creating the Wallarm Account: quickstart-en/qs-license-en.md
+          - Install the Filter Node (NGINX): quickstart-en/qs-install-node-en.md
+      - Configure Traffic Proxying: quickstart-en/qs-setup-proxy-en.md
+      - Check the Filter Node Operation: quickstart-en/qs-check-operation-en.md
+    - Getting started: getting-started.md
+    - Extensions:
+      - Admonition:
+        - Admonition: extensions/admonition.md
+      - CodeHilite: extensions/codehilite.md
+      - Footnotes: extensions/footnotes.md
+      - Metadata: extensions/metadata.md
+      - PyMdown: extensions/pymdown.md
+      - Permalinks: extensions/permalinks.md
+    - Plugins:
+      - Minify HTML: plugins/minify-html.md
+      - Revision date: plugins/revision-date.md
+      - Search: plugins/search.md
+    - Specimen: specimen.md
+    - Customization: customization.md
+    - Compliance with GDPR: compliance.md
+    - Release notes: release-notes.md
+    - Author's notes: authors-notes.md
+    - Contributing: contributing.md
+    - License: license.md
