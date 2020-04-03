@@ -105,11 +105,9 @@ Run the following command to install the required package:
 
 --8<-- "en/include-en/install-nginx-en.md"
 
-<!-- -->
-
 ## 4. Configure Postanalytics
 
-    #### Info::
+!!! info
     Skip this step if you installed postanalytics on a separate server as you already have your postanalytics configured.
 
 Postanalytics uses the in-memory storage Tarantool.
@@ -117,8 +115,6 @@ Postanalytics uses the in-memory storage Tarantool.
 You must set the amount of server RAM allocated to Tarantool.
 
 --8<-- "en/include-en/configure-postanalytics-en.md"
-
-<!-- -->
 
 ## 5. Connect the Wallarm Module
 
@@ -145,68 +141,44 @@ pid        /var/run/nginx.pid;
 
 Copy the configuration files for the system setup:
 
-```term
-$ cp /usr/share/doc/nginx-module-wallarm/examples/*.conf /etc/nginx/conf.d/
+``` bash
+cp /usr/share/doc/nginx-module-wallarm/examples/*.conf /etc/nginx/conf.d/
 ```
-
-<!-- -->
 
 ## 6. Set up the Filter Node for Using a Proxy Server
 
 --8<-- "en/include-en/setup-proxy.md"
 
-<!-- -->
-
 ## 7. Connect the Filter Node to the Wallarm Cloud
 
 --8<-- "en/include-en/connect-cloud-en.md"
 
-<!-- -->
-
 ## 8. Configure the Server Addresses of Postanalytics
 
-    #### Info::
-      * Skip this step if you installed postanalytics and the filter node on the same server.
-    * Do this step if you installed postanalytics and the filter node on separate servers.
-
-<!-- -->
+!!! info
+  * Skip this step if you installed postanalytics and the filter node on the same server.
+  * Do this step if you installed postanalytics and the filter node on separate servers.
 
 --8<-- "en/include-en/configure-postanalytics-address-nginx-en.md"
-
-<!-- -->
 
 ## 9. Configure the Filtration Mode
 
 --8<-- "en/include-en/setup-filter-nginx-en.md"
 
-<!-- -->
-
 ## 10. Configure Logging
 
-<!-- -->
 --8<-- "en/include-en/installation-step-logging.md"
-<!-- -->
 
 ## 11. Restart NGINX
 
 --8<-- "en/include-en/root_perm_info.md"
 
-<!-- -->
-
-<!-- -->
-
 --8<-- "en/include-en/restart-nginx-en.md"
-
-
-<!-- -->
-
 
 ## The Installation Is Complete
 
 --8<-- "en/include-en/check-setup-installation-en.md"
 
 --8<-- "en/include-en/filter-node-defaults.md"
-
-<!-- -->
 
 --8<-- "en/include-en/installation-extra-steps.md"

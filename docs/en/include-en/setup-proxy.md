@@ -1,7 +1,7 @@
-      #### Info::
-      This setup step is intended for users who use their own proxy server for the operation of the protected web applications.
-      
-      If you do not use a proxy server, skip this step of the setup.
+!!! info
+    This setup step is intended for users who use their own proxy server for the operation of the protected web applications.
+
+    If you do not use a proxy server, skip this step of the setup.
 
 You need to assign new values to the environment variables, which define the proxy server used, to configure Wallarm node for using your proxy server.
 
@@ -19,15 +19,14 @@ Assign the `<scheme>://<proxy_user>:<proxy_pass>@<host>:<port>` string values to
 
 Assign a `"<res_1>, <res_2>, <res_3>, <res_4>, ..."` array value, where `<res_1>`, `<res_2>`, `<res_3>`, and `<res_4>` are the IP addresses and/or domains, to the `no_proxy` variable to define a list of the resources which proxy should not be used for. This array should consist of IP addresses and/or domains.
 
-    #### Warning:: Resources that need to be addressed without a proxy
-      Add the following IP addresses and domain to the list of the resources that have to be addressed without a proxy for the system to operate correctly: `127.0.0.1`, `127.0.0.8`, `127.0.0.9`, and `localhost`.
->
+!!! warning "Resources that need to be addressed without a proxy"
+    Add the following IP addresses and domain to the list of the resources that have to be addressed without a proxy for the system to operate correctly: `127.0.0.1`, `127.0.0.8`, `127.0.0.9`, and `localhost`.
+
     The `127.0.0.8` and `127.0.0.9` IP addresses are used for the operation of the Wallarm filter node.
 
-
 The example of the correct `/etc/environment` file contents below demonstrates the following configuration:
-*   HTTPS and HTTP requests are proxied to the `1.2.3.4` host with the `1234` port, using the `admin` username and the `01234` password for authorization on the proxy server.
-*   Proxying is disabled for the requests sent to `127.0.0.1`, `127.0.0.8`, `127.0.0.9`, and `localhost`.
+* HTTPS and HTTP requests are proxied to the `1.2.3.4` host with the `1234` port, using the `admin` username and the `01234` password for authorization on the proxy server.
+* Proxying is disabled for the requests sent to `127.0.0.1`, `127.0.0.8`, `127.0.0.9`, and `localhost`.
 
 ```
 https_proxy=http://admin:01234@1.2.3.4:1234
