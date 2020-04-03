@@ -18,18 +18,16 @@ To install the filter node, do the following:
 
 --8<-- "en/include-en/elevated-priveleges.md"
 
-<!-- -->   
-
 ## 1. Install NGINX
 
 Install NGINX from the official NGINX repositoriy by following the instruction that corresponds with your operating system from the list below.
 
-*   [Ubuntu](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-ubuntu-package-from-the-official-nginx-repository)
-*   [Debian](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-debian-package-from-the-official-nginx-repository)
-*   [CentOS](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-centos-rhel-package-from-the-official-nginx-repository)
-*   [Amazon Linux 2](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-centos-rhel-package-from-the-official-nginx-repository): use the CentOS 7 instruction 
+* [Ubuntu](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-ubuntu-package-from-the-official-nginx-repository)
+* [Debian](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-debian-package-from-the-official-nginx-repository)
+* [CentOS](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-centos-rhel-package-from-the-official-nginx-repository)
+* [Amazon Linux 2](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-a-prebuilt-centos-rhel-package-from-the-official-nginx-repository): use the CentOS 7 instruction 
 
-        #### Warning:: Stable NGINX version
+    !!! warning "Stable NGINX version"
     Make sure you are installing the *stable* version of NGINX. The `mainline` part of the path must be omitted from the NGINX repository link.
 
 ## 2. Add the Wallarm Repositories
@@ -41,8 +39,6 @@ Depending on your operating system, run one of the commands:
 --8<-- "en/include-en/add-repo-en.md"
 
 --8<-- "en/include-en/access-repo-en.md"
-
-<br>
 
 ## 3. Install the Wallarm Packages
 
@@ -83,17 +79,13 @@ pid        /var/run/nginx.pid;
 
 Copy the configuration files for the system setup:
 
-```term
-$ cp /usr/share/doc/nginx-module-wallarm/examples/*.conf /etc/nginx/conf.d/
+``` bash
+cp /usr/share/doc/nginx-module-wallarm/examples/*.conf /etc/nginx/conf.d/
 ```
-
-<br>
 
 ## 6. Connect the Filter Node to the Wallarm Cloud
 
 --8<-- "en/include-en/connect-cloud-en.md"
-
-<br>
 
 ## Installation Completed
 

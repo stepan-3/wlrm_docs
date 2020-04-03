@@ -247,6 +247,13 @@ nav:
               - Scanner Addresses for EU Cloud: en/admin-en/scanner-address-en.md
               - Scanner Addresses for US Cloud: en/admin-en/scanner-address-us-en.md
           - Contacting Wallarm Support to Stop the Scanner: en/admin-en/scanner-complaint-en.md
+      - Partner Guide:
+        - Introduction: en/partner-en/partner-intro-en.md
+        - Signing up with Wallarm: en/partner-en/partner-signup-en.md
+        - Getting your UUID and Secret Key: en/partner-en/partner-uuid-en.md
+        - Installing the Filter Node: en/partner-en/partner-install-en.md
+        - Creating a Tenant: en/partner-en/partner-create-tenant-en.md
+        - Configuring Traffic Processing: en/partner-en/partner-set-tenant-en.md      
   - User guide:
       - Introduction: en/user-guides/cloud-ui/user-intro.md
       - Dashboards:
@@ -311,13 +318,6 @@ nav:
           - Splunk Notifications: en/user-guides/cloud-ui/settings/integrations/splunk.md
           - Sumo Logic Notifications: en/user-guides/cloud-ui/settings/integrations/sumologic.md
       - Guide to Using SSO Authentication to Log in to Wallarm: en/user-guides/cloud-ui/use-sso.md    
-  - Partner Guide:
-      - Introduction: en/partner-en/partner-intro-en.md
-      - Signing up with Wallarm: en/partner-en/partner-signup-en.md
-      - Getting your UUID and Secret Key: en/partner-en/partner-uuid-en.md
-      - Installing the Filter Node: en/partner-en/partner-install-en.md
-      - Creating a Tenant: en/partner-en/partner-create-tenant-en.md
-      - Configuring Traffic Processing: en/partner-en/partner-set-tenant-en.md
   - Release Notes:
       - Version 2.14: en/release-notes-en/relnotes-en_v2.14.md
       - Version 2.12: en/release-notes-en/relnotes-en_v2.12.md
@@ -330,9 +330,9 @@ nav:
       - Glossary: en/glossary-en.md
       - Attacks and Vulnerabilities List: en/attacks-vulns-list.md
       - Contacting the Support Team: en/cloud-include/contacting-support.md
-  - Envoy: 
-    - Installing with Docker: en/admin-en/installation-guides/envoy/envoy-docker.md
-    - Configuration Options (Envoy): en/admin-en/configuration-guides/envoy/fine-tuning.md
+#  - Envoy: 
+#    - Installing with Docker: en/admin-en/installation-guides/envoy/envoy-docker.md
+#    - Configuration Options (Envoy): en/admin-en/configuration-guides/envoy/fine-tuning.md
   - MkDocs:
     - Getting started: getting-started.md
     - Markdown: markdown.md
